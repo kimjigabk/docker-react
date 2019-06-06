@@ -1,0 +1,17 @@
+FROM node:alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+RUN npm install
+
+COPY . .
+#COPY 필요 없는 이유: docker-compose에서 다 reference로 처리하기때문
+#근데 production에서는 필요하다 지금은 내 컴터의 파일로 레퍼런스 되지만.
+
+
+CMD ["npm", "run", "start"]
+
+
+#DOCKER VOLUME:: 레퍼런스를만들어서 c모든파일을 copy안해도됨.
+#docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <image_id>
