@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn 개씨발ㄴㄴㄴㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗ
+          안녕하세요~ feature
         </a>
       </header>
     </div>
